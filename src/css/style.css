@@ -1,0 +1,31 @@
+/* File Setup frame css */
+#header nav{
+    background-color: darkgreen;
+    -webkit-box-shadow: 0px -7px 50px 0px rgba(0,0,0,0.28);
+    -moz-box-shadow: 0px -7px 50px 0px rgba(0,0,0,0.28);
+    box-shadow: 0px -7px 50px 0px rgba(0,0,0,0.28);
+    border-bottom: 2px solid #ffffff ;
+}
+#header {
+    margin-bottom: 65px;
+}
+#footer {
+background-color: linen;
+padding: 10px;
+}
+#footer p {
+    text-align: center;
+}
+.navbar-default .navbar-brand {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #ffffff;
+}
+.text-logo{
+    font-weight: bold;
+}
+.table-return {
+  margin-top: 10px;
+  text-align: center;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>TieuHauVuongTools</title>
+
+    <!-- Bootstrap -->
+    <link href="./src/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/style.css">
+
+  </head>
+  <body>
+    <div id="app">
+        <div id="header">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand text-logo" href="/">{{ pageSetupContent.textLogo }}</a>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#">Introduce</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li v-for="contact in pageSetupContent.Contacts"><a v-bind:herf="contact.link">{{ contact.content }}</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                    </div>
+                </nav>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">TieuHauVuongTools Info</h3>
+                            </div>
+                            <div class="panel-body">
+                                {{ pageSetupContent.pageInfo }}
+                            </div>
+                    </div>
+                    <div class="list-group">
+                        <a class="list-group-item active">General Tool</a>
+                        <a v-for="tool in pageSetupContent.generalTools" v-bind:href="tool.link" class="list-group-item">{{ tool.name }}</a>
+                    </div>
+
+                </div>
+                <div class="col-sm-6">
+                  <convertnumberhex-component></convertnumberhex-component>
+                </div>
+                <div class="col-sm-3">
+                    <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Tutorial Tool</h3>
+                            </div>
+                            <div class="panel-body">
+                                Đây sẽ là phần giới thiệu sử dụng tool. Phần này cũng sẽ được load từ file nhé
+                            </div>
+                    </div>
+
+                    <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Tools Info</h3>
+                            </div>
+                            <div class="panel-body">
+                                Đây sẽ là giới thiệu riêng của phần chức năng. Mình sẽ load nó ra từ file txt
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p><a href="https://facebook.com/nguyenvananh.2k1">Nguyễn Văn Anh</a> - TieuHauVuongTools © 2019</p>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./src/vendor/jquery/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./src/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./dist/build.js"></script>
+  </body>
+</html>
